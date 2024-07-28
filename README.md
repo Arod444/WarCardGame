@@ -144,33 +144,186 @@ Loops
 6. Flowchart Description
 Flowchart for "War" Card Game
 
-1. Start
-2. Initialize Variables:
-   - `srand(static_cast<unsigned int>(time(0)));`
-   - `vector<int> deck(52);`
-   - `int player1Score = 0, player2Score = 0;`
-   - `int rounds;`
-3. User Input:
-   - Prompt user for the number of rounds: `cin >> rounds;`
-4. Open Output File:
-   - `ofstream outFile("WarGameResults.txt");`
-5. Game Loop:
-   - For each round:
-     - Shuffle Deck: `shuffleDeck(deck);`
-     - Draw Cards: `int player1Card = deck[cardIndex++];` `int player2Card = deck[cardIndex++];`
-     - Get Card Names: `string player1CardName = getCardName(player1Card);` `string player2CardName = getCardName(player2Card);`
-     - Compare Cards:
-       - If `player1Card > player2Card`: Player 1 wins.
-       - Else If `player2Card > player1Card`: Player 2 wins.
-       - Else: Handle War.
-6. End of Game:
-   - Display final scores.
-   - Determine and display the winner.
-7. Close Output File:
-   - `outFile.close();`
-8. End
+ Main Logic Flowchart 
+ +---------------------+
+|       Start         |
++---------------------+
+          |
+          V
++---------------------+
+| Initialize Variables|
+| ------------------- |
+| srand(static_cast   |
+| <unsigned int>(time(0)));|
+| vector<int> deck(52);|
+| int player1Score = 0;|
+| int player2Score = 0;|
+| int rounds;         |
++---------------------+
+          |
+          V
++---------------------+
+|    User Input       |
+| ------------------- |
+| cin >> rounds;      |
++---------------------+
+          |
+          V
++---------------------+
+| Open Output File    |
+| ------------------- |
+| ofstream outFile    |
+| ("WarGameResults.txt");|
++---------------------+
+          |
+          V
++---------------------+
+|     Game Loop       |
+| ------------------- |
+| for (int i = 0; i < |
+| rounds; ++i) {      |
+|   Shuffle Deck      |
+|   Draw Cards        |
+|   Get Card Names    |
+|   Compare Cards     |
+|   if (player1Card > |
+|       player2Card) {|
+|       Player 1 wins}|
+|   else if (player2Card|
+|       > player1Card) {|
+|       Player 2 wins}|
+|   else { Handle War}|
+| }                   |
++---------------------+
+          |
+          V
++---------------------+
+|   End of Game       |
+| ------------------- |
+| Display final scores|
+| Determine the winner|
+| Output the results  |
+| to the file;        |
++---------------------+
+          |
+          V
++---------------------+
+| Close Output File   |
+| ------------------- |
+| outFile.close();    |
++---------------------+
+          |
+          V
++---------------------+
+|       End           |
++---------------------+
+Game Loop Flowchart 
++---------------------+
+|   Game Loop         |
++---------------------+
+          |
+          V
++---------------------+
+|   Shuffle Deck      |
+| ------------------- |
+| shuffleDeck(deck);  |
++---------------------+
+          |
+          V
++---------------------+
+|     Draw Cards      |
+| ------------------- |
+| int player1Card =   |
+| deck[cardIndex++];  |
+| int player2Card =   |
+| deck[cardIndex++];  |
++---------------------+
+          |
+          V
++---------------------+
+|   Get Card Names    |
+| ------------------- |
+| string player1CardName = |
+| getCardName(player1Card);|
+| string player2CardName = |
+| getCardName(player2Card);|
++---------------------+
+          |
+          V
++---------------------+
+|   Compare Cards     |
+| ------------------- |
+| if (player1Card >   |
+| player2Card) {...}  |
+| else if (player2Card|
+| > player1Card) {...}|
+| else { Handle War } |
++---------------------+
+          |
+          V
++---------------------+
+|       End Loop      |
++---------------------+
+Detailed Flowchart Descriptions
+Main Logic
+Start
 
+Begin the program execution.
+Initialize Variables
 
+Set the random number seed.
+Initialize the deck of cards.
+Initialize player scores.
+Declare the number of rounds.
+User Input
+
+Prompt the user to enter the number of rounds.
+Open Output File
+
+Open a file to record the game results.
+Game Loop
+
+Loop for the number of rounds specified.
+Inside the loop:
+Shuffle Deck: Shuffle the deck of cards.
+Draw Cards: Draw a card for each player.
+Get Card Names: Get the names of the drawn cards.
+Compare Cards: Compare the values of the drawn cards.
+If player 1's card is higher, player 1 wins.
+If player 2's card is higher, player 2 wins.
+If the cards are equal, handle the war scenario.
+End of Game
+
+Display the final scores.
+Determine and display the winner.
+Output the results to the file.
+Close Output File
+
+Close the file to ensure all data is written.
+End
+
+End the program execution.
+Game Loop
+Shuffle Deck
+
+Shuffle the deck of cards.
+Draw Cards
+
+Draw a card for player 1.
+Draw a card for player 2.
+Get Card Names
+
+Get the name of player 1's card.
+Get the name of player 2's card.
+Compare Cards
+
+Compare the values of the drawn cards.
+If player 1's card is higher, player 1 wins.
+If player 2's card is higher, player 2 wins.
+If the cards are equal, handle the war scenario.
+End Loop
+
+End the loop and proceed to the next round.
 7. Program Listing
 cpp
 
