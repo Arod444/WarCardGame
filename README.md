@@ -326,15 +326,16 @@ If the cards are equal, handle the war scenario.
 End Loop
 
 End the loop and proceed to the next round.
+
 7. Program Listing
 cpp
 
-/
+*/
 File:   main.cpp
 Author: Angel Rodriguez
 Created on July 28, 2024
 Purpose: Simple Card Game - War
- /
+ /*
 
 // System Libraries
 #include <iostream>
