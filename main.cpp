@@ -1,7 +1,7 @@
 /*
  * File:   main.cpp
- * Author: [Your Name]
- * Created on July 20, 2024
+ * Author: Angel rodriguez 
+ * Created on July 28, 2024
  * Purpose: Simple Card Game - War
  */
 
