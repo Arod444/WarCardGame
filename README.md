@@ -142,9 +142,11 @@ Loops
 
 
 6. Flowchart Description
+   
 Flowchart for "War" Card Game
 
- Main Logic Flowchart 
+(Main Logic Flowchart)
+ 
  +---------------------+
 |       Start         |
 +---------------------+
