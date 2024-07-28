@@ -141,31 +141,35 @@ Loops
 | `for`       | 6         | Loop through elements                 | Throughout                        |
 
 
-### 6. Flowchart Description
+6. Flowchart Description
 Flowchart for "War" Card Game
 
 1. Start
 2. Initialize Variables:
-   - Set random number seed
-   - Initialize player scores to 0
-   - Initialize number of rounds to play
+   - `srand(static_cast<unsigned int>(time(0)));`
+   - `vector<int> deck(52);`
+   - `int player1Score = 0, player2Score = 0;`
+   - `int rounds;`
 3. User Input:
-   - Prompt user for the number of rounds to play
+   - Prompt user for the number of rounds: `cin >> rounds;`
 4. Open Output File:
-   - Open a file to record game results
-5. Game Loop (for each round):
-   - Generate random card for Player 1
-   - Generate random card for Player 2
-   - Determine the card names for both players
-   - Compare the card values
-   - Update scores based on the comparison
-   - Record the results in the output file
-   - Display the results to the console
+   - `ofstream outFile("WarGameResults.txt");`
+5. Game Loop:
+   - For each round:
+     - Shuffle Deck: `shuffleDeck(deck);`
+     - Draw Cards: `int player1Card = deck[cardIndex++];` `int player2Card = deck[cardIndex++];`
+     - Get Card Names: `string player1CardName = getCardName(player1Card);` `string player2CardName = getCardName(player2Card);`
+     - Compare Cards:
+       - If `player1Card > player2Card`: Player 1 wins.
+       - Else If `player2Card > player1Card`: Player 2 wins.
+       - Else: Handle War.
 6. End of Game:
-   - Display and record the final scores
-   - Determine and display the winner
-7. Close Output File
+   - Display final scores.
+   - Determine and display the winner.
+7. Close Output File:
+   - `outFile.close();`
 8. End
+
 
 7. Program Listing
 cpp
