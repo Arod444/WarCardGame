@@ -1,9 +1,117 @@
-/*
- * File:   main.cpp
- * Author: [Your Name]
- * Created on July 20, 2024
- * Purpose: Simple Card Game - War
- */
+Project Proposal for Project 2
+
+Title
+Card Game - War
+
+Course
+CIS-5
+
+Section
+45744
+
+## Due Date
+July 28, 2024
+
+Author
+Angel Rodriguez
+
+Table of Contents
+1. Introduction
+2. Game Play and Rules
+3. Development Summary
+4. Specifications
+5. Checkoff Sheet
+6. Flowchart Description
+7. Program Listing
+
+1. Introduction
+The game "War" is a simple card game played between two players. Each player has a deck of cards, and the game proceeds with each player drawing a card simultaneously. The player with the higher card wins the round and takes both cards. The game continues until one player has all the cards or a predetermined number of rounds have been played.
+The purpose of this project is to implement the "War" card game in C++ using the fundamental programming constructs we have covered in the course. This project demonstrates my understanding of loops, conditionals, input/output, and basic data structures.
+
+2. Game Play and Rules
+- The game uses a standard 52-card deck.
+- The deck is shuffled, and each player is dealt 26 cards.
+- In each round, both players draw the top card of their deck and reveal it.
+- The player with the higher card takes both cards and places them at the bottom of their deck.
+- If the cards are of equal value, a "war" occurs, and additional cards are drawn.
+- The game ends when one player has all the cards or after a set number of rounds.
+
+3. Development Summary
+3.1 Version 1 Comments on Development
+- Deck Shuffling: Implemented using a simple randomization algorithm.
+- Game Logic: Basic game loop handling card comparison and war scenarios.
+- User Interface: Text-based input and output for simplicity.
+- Challenges: Handling the "war" scenario correctly and ensuring the game ends properly.
+
+4. Specifications
+4.1 Sample Inputs/Outputs
+Example Input:
+- Start the game
+- Enter number of rounds: 5
+
+Example Output:
+Round 1
+Player 1 draws Ace
+Player 2 draws King
+Player 1 wins the round!
+
+Round 2
+Player 1 draws 7
+Player 2 draws 9
+Player 2 wins the round!
+
+Final Scores:
+Player 1: 3
+Player 2: 2
+Player 1 wins the game!
+
+
+### 5. Checkoff Sheet
+- Implemented card drawing mechanism
+- Implemented random number generation for card values
+- Implemented score tracking for both players
+- Implemented input and output handling
+- Implemented game loop with a fixed number of rounds
+- Ensured no use of arrays or functions
+- Included file I/O to record game results
+- Properly formatted output
+- Included user prompts and validations
+- Created a comprehensive write-up
+
+### 6. Flowchart Description
+Flowchart for "War" Card Game
+
+1. Start
+2. Initialize Variables:
+   - Set random number seed
+   - Initialize player scores to 0
+   - Initialize number of rounds to play
+3. User Input:
+   - Prompt user for the number of rounds to play
+4. Open Output File:
+   - Open a file to record game results
+5. Game Loop (for each round):
+   - Generate random card for Player 1
+   - Generate random card for Player 2
+   - Determine the card names for both players
+   - Compare the card values
+   - Update scores based on the comparison
+   - Record the results in the output file
+   - Display the results to the console
+6. End of Game:
+   - Display and record the final scores
+   - Determine and display the winner
+7. Close Output File
+8. End
+
+7. Program Listing
+cpp
+/
+File:   main.cpp
+Author: Angel Rodriguez
+Created on July 28, 2024
+Purpose: Simple Card Game - War
+ /
 
 // System Libraries
 #include <iostream>
