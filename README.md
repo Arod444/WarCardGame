@@ -66,7 +66,7 @@ Player 2: 2
 Player 1 wins the game!
 
 
-### 5. Checkoff Sheet
+5. Checkoff Sheet
 - Implemented card drawing mechanism
 - Implemented random number generation for card values
 - Implemented score tracking for both players
@@ -77,6 +77,69 @@ Player 1 wins the game!
 - Properly formatted output
 - Included user prompts and validations
 - Created a comprehensive write-up
+
+Constructs & Concepts Utilized
+Checkoff Sheet for Project 2
+
+Constructs & Concepts Utilized
+
+iostream Library
+| Name        | Frequency | Description                           | Location                          |
+|-------------|-----------|---------------------------------------|-----------------------------------|
+| `cout`      | 15        | Output data                           | Throughout                        |
+| `cin`       | 2         | Input data                            | `main()`                          |
+
+cstdlib Library
+| Name        | Frequency | Description                           | Location                          |
+|-------------|-----------|---------------------------------------|-----------------------------------|
+| `srand()`   | 1         | Random number seed                    | `main() - Line 17`                |
+| `rand()`    | 1         | Generates random number               | `shuffleDeck() - Line 30`         |
+
+ctime Library
+| Name        | Frequency | Description                           | Location                          |
+|-------------|-----------|---------------------------------------|-----------------------------------|
+| `time`      | 1         | Set current time                      | `main() - Line 17`                |
+
+fstream Library
+| Name        | Frequency | Description                           | Location                          |
+|-------------|-----------|---------------------------------------|-----------------------------------|
+| `ofstream`  | 1         | Declare variable for file output      | `main() - Line 23`                |
+| `outFile`   | 11        | Write to file                         | Throughout                        |
+
+string Library
+| Name        | Frequency | Description                           | Location                          |
+|-------------|-----------|---------------------------------------|-----------------------------------|
+| `string`    | 3         | Declare variable                      | Throughout                        |
+
+vector Library
+| Name        | Frequency | Description                           | Location                          |
+|-------------|-----------|---------------------------------------|-----------------------------------|
+| `vector`    | 7         | Declare and manipulate dynamic array  | Throughout                        |
+
+algorithm Library
+| Name        | Frequency | Description                           | Location                          |
+|-------------|-----------|---------------------------------------|-----------------------------------|
+| `random_shuffle` | 1    | Shuffle elements in the vector        | `shuffleDeck() - Line 29`         |
+
+Data Types
+| Data Type   | Frequency | Description                           | Location                          |
+|-------------|-----------|---------------------------------------|-----------------------------------|
+| `int`       | 14        | Integer variables                     | Throughout                        |
+| `string`    | 3         | String variables                      | Throughout                        |
+| `ofstream`  | 1         | File output stream                    | `main() - Line 23`                |
+
+Conditional Statements
+| Conditional Statement | Frequency | Description                   | Location                          |
+|-----------------------|-----------|-------------------------------|-----------------------------------|
+| `if`                  | 5         | Conditional execution         | Throughout                        |
+| `else`                | 3         | Alternative execution         | Throughout                        |
+| `switch`              | 1         | Conditional execution for cases| `getCardName() - Line 38`         |
+
+Loops
+| Loop Type   | Frequency | Description                           | Location                          |
+|-------------|-----------|---------------------------------------|-----------------------------------|
+| `for`       | 6         | Loop through elements                 | Throughout                        |
+
 
 ### 6. Flowchart Description
 Flowchart for "War" Card Game
@@ -106,6 +169,7 @@ Flowchart for "War" Card Game
 
 7. Program Listing
 cpp
+
 /
 File:   main.cpp
 Author: Angel Rodriguez
