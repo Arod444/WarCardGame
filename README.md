@@ -264,10 +264,12 @@ Game Loop Flowchart
 +---------------------+
 |       End Loop      |
 +---------------------+
+
+
 Detailed Flowchart Descriptions
 Main Logic
-Start
 
+Start
 Begin the program execution.
 Initialize Variables
 
